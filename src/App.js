@@ -3,7 +3,7 @@ import Dated from "./date.js";
 import Year from "./year.js";
 import Month from "./month.js";
 import { useEffect, useRef, useState } from "react";
-import { Axios } from "axios";
+import  axios  from "axios";
 function App() {
   let firstnamedata = useRef(null);
   let day=new Date().getDate();
@@ -43,7 +43,8 @@ const handlerdate=(e)=>{
 }
 const apicall=async()=>{
     //  console.log(data)
-    let res=Axios.post(cs)
+    let res=await axios.post('http://localhost:8000/signup',data);
+    console.log(res.data.message)
 }
 
 
