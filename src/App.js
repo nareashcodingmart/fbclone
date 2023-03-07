@@ -43,7 +43,7 @@ const handlerdate=(e)=>{
 }
 const apicall=async()=>{
     //  console.log(data)
-    let res=Axios.post()
+    let res=Axios.post(cs)
 }
 
 
